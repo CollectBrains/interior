@@ -61,4 +61,100 @@ body
 .row
 	+row-flex
 
+.main-header
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		background-color: $accent-theme
+		opacity: .97
+		top: 0
+		left: 0
+		width: 50vw
+		height: 100vh
+		max-height: 770px
+		z-index: 0
+
+.top-line
+	margin-top: 22px
+	text-align: center
+	position: relative
+	display: flex
+	justify-content: space-between
+	width: 100%
+	align-items: baseline
+	z-index: 5
+	margin-bottom: 30px
+
+.logo
+	position: absolute
+	top: 15px
+	left: 50%
+	transform: translate(-35%, 0)
+	img
+		display: block
+		max-width: 100%
+
+.phone
+	+mullerLight
+	font-size: 14px
+	color: #252525
+
+.toggle-mnu
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+	span:after, span:before
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+	span:after
+		top: 18px
+	span
+		position: relative
+		display: block
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+	&.on span
+		background-color: transparent
+	&.on span:before
+		transform: rotate(45deg) translate(-1px, 0px)
+	&.on span:after
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.main-menu
+	display: none
+	position: relative
+	z-index: 10
+	text-align: center
+	width: 100%
+	background-color: #112537
+	ul
+		list-style-type: none
+		margin: 120px 0 120px
+		padding: 0
+	li
+		display: block
+		a
+			display: block
+			+ralewaySemiBold
+			font-size: 20px
+			padding: 10px 0
+			color: #ffffff
+			opacity: .5
+			text-transform: uppercase
+			transition: color .2s, opacity .2s
+			&:hover
+				color: $accent
+				opacity: 1
+
+
+
 @import "media" // Всегда в конце
