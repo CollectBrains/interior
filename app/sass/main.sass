@@ -57,6 +57,7 @@ body
 
 .wrapper
 	+wrapper
+	position: relative
 
 .row
 	+row-flex
@@ -131,7 +132,9 @@ body
 
 .main-menu
 	display: none
-	position: relative
+	position: absolute
+	top: 100px
+	left: 0
 	z-index: 10
 	text-align: center
 	width: 100%
@@ -154,6 +157,27 @@ body
 			&:hover
 				color: $accent
 				opacity: 1
+
+.composition
+	+col
+	+shift-left(1)
+	+size(4)
+	color: #ffffff
+	&__title
+		font-size: 60px
+		+playFontBold
+		line-height: 1
+		margin-bottom: 20px
+	&__text
+		+mullerLight
+		font-size: 14px
+
+.button
+
+
+
+
+
 
 
 
